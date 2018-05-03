@@ -22,7 +22,7 @@ export class HomePage {
       content: 'Loading',
       duration: 60000
     });
-    this.http.get(`https://api.waqi.info/feed/here/?token=demo`)
+    this.http.get(`https://api.waqi.info/feed/here/?token=1f59a579d2ed89a93909e4144cb770b50e60b85c`)
       .toPromise()
       .then(response => {
         this.aqi = response.json();
@@ -39,7 +39,7 @@ export class HomePage {
       return { code: 'mod', val: 'Moderate' };
     } else if (val <= 200) {
       return { code: 'unhealthy', val: 'Unhealthy' };
-    } if (val <= 250) {
+    } if (val <= 300) {
       return { code: 'vunhealthy', val: 'Very Unhealthy' };
     } else if (val > 300) {
       return { code: 'hazardous', val: 'Hazardous' };

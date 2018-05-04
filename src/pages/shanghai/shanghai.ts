@@ -31,7 +31,7 @@ export class ShanghaiPage {
       content: 'Loading',
       duration: 60000
     });
-    this.http.get(`https://api.waqi.info/feed/shanghai/?token=demo`)
+    this.http.get(`https://api.waqi.info/feed/bangalore/?token=demo`)
       .toPromise()
       .then(response => {
         this.aqi = response.json();

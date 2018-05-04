@@ -39,7 +39,7 @@ export class HomePage {
       return { code: 'mod', val: 'Moderate' };
     } else if (val <= 200) {
       return { code: 'unhealthy', val: 'Unhealthy' };
-    } if (val <= 300) {
+    } if (val <= 250) {
       return { code: 'vunhealthy', val: 'Very Unhealthy' };
     } else if (val > 300) {
       return { code: 'hazardous', val: 'Hazardous' };

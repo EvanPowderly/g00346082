@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { ShanghaiPage } from '../pages/shanghai/shanghai';
+import { ChartPage } from '../pages/chart/chart';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -12,7 +14,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    ShanghaiPage,
+    ChartPage
   ],
   imports: [
     BrowserModule,
@@ -22,7 +26,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    ShanghaiPage,
+    ChartPage
   ],
   providers: [
     StatusBar,

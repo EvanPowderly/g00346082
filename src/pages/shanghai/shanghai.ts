@@ -4,11 +4,20 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 import { LoadingController } from 'ionic-angular';
 
+/**
+ * Generated class for the ShanghaiPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+
+@IonicPage()
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-shanghai',
+  templateUrl: 'shanghai.html',
 })
 export class ShanghaiPage {
+
   aqi: any;
   constructor(public loader: LoadingController, public navCtrl: NavController, public http: Http) {
     this.http = http;
@@ -22,7 +31,7 @@ export class ShanghaiPage {
       content: 'Loading',
       duration: 60000
     });
-    this.http.get(`https://api.waqi.info/feed/here/?token=1f59a579d2ed89a93909e4144cb770b50e60b85c`)
+    this.http.get(`https://api.waqi.info/feed/shanghai/?token=demo`)
       .toPromise()
       .then(response => {
         this.aqi = response.json();
@@ -39,7 +48,7 @@ export class ShanghaiPage {
       return { code: 'mod', val: 'Moderate' };
     } else if (val <= 200) {
       return { code: 'unhealthy', val: 'Unhealthy' };
-    } if (val <= 300) {
+    } if (val <= 250) {
       return { code: 'vunhealthy', val: 'Very Unhealthy' };
     } else if (val > 300) {
       return { code: 'hazardous', val: 'Hazardous' };
